@@ -1,0 +1,119 @@
+﻿@page {
+    size: A4 landscape;
+}
+body {
+    background-color: #9DBDFF;
+    padding: 0;
+    margin: 0;
+}
+
+.comum {
+    background-color: Gray;
+    font-size: 14px;
+    font-family: Segoe UI;
+}
+
+#site {
+    padding: 0;
+    margin: 0;
+}
+
+.cabecalho {
+    height: 100px;
+    background-color: White;
+    background-image: url(Imagens/cabecalho.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.conteudo {
+    height: 200px;
+    vertical-align: top;
+}
+
+.rodape {
+    background-color: #6591CC;
+    color: White;
+    font-size: 13px;
+    text-align: center;
+    height:45px;
+}
+
+
+.linhaAlternativa {
+    background-color: #C1D6FF;
+}
+
+.linhaTitulo {
+    background-color: #17375E;
+    color: White;
+    font-size: 14px;
+    font-weight: bolder;
+    padding: 5px;
+    padding-bottom: 8px;
+}
+
+.texto {
+    font-size: 14px;
+}
+
+.textoGrid {
+    font-size: 11px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.fonteTitulo {
+    background-color: #333333;
+    color: White;
+    text-transform: uppercase;
+    height: 25px;
+    font-size: 12px;
+    padding:5px;
+
+}
+
+.btn, .btn:focus {
+    outline: none;
+    box-shadow: 0 2px #898989;
+    background-color: #eee;
+}
+
+    .btn:active {
+        box-shadow: 0 0px #666;
+        transform: translateY(2px);
+    }
+
+.btn-pesquisa, .btn-pesquisa:focus {
+    box-shadow: 0 1.5px #898989;
+    display:inline-flex;
+    align-self:center;
+    margin-left: 3px;
+}
+
+    .btn-pesquisa:active {
+        box-shadow: 0 0px #666;
+        transform: translateY(1.5px);
+    }
+
+.display-none {
+    display: none;
+}
+
+.padding-search{
+    padding-top:3px;
+    padding-bottom:3px;
+}
+
+#contentHolder{
+    padding-bottom:10px;
+}
+
+/*.form-control-sm, .btn-pesquisa{
+    font-size:11px;
+}*/
+
+#divLogin {
+   margin:auto;
+   margin-top:30px;
+}

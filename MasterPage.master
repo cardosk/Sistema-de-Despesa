@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Master Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <%= "<link href=\"style.css?" + (new Random().Next(1000,10000)) +"\" rel=\"stylesheet\" type=\"text/css\" />" %>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="Mascaras.js" type="text/javascript"> </script>
+    <script type="text/javascript"
+        src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width;initial-scale=1.0" />
+
+</head>
+<body>
+
+    <form runat="server" id="form" method="post">
+        <div runat="server" id="site">
+            <div class="cabecalho">
+            </div>
+
+            <div id="contentHolder">
+                <asp:ContentPlaceHolder ID="content" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div class="fonteTitulo" align="center" id="divBemVindo" runat="server">
+                <asp:Label ID="LabelMensagem" runat="server" Font-Bold="True"></asp:Label>
+            </div>
+            <div class="rodape">
+                <div>
+                    Para sair do sistema, clique
+                    <asp:LinkButton ID="linkSair" runat="server" CausesValidation="False" OnClick="btnSair_Click" ForeColor="DarkBlue">aqui</asp:LinkButton>
+                </div>
+                <a href="http:\\www.enygma.com.br" target="_blank" style="text-decoration: none; color: darkblue;">Enygma Tecnologia.</a> Todos os direitos reservados.
+            </div>
+        </div>
+
+
+    </form>
+
+    <script type="text/javascript">
+
+        function redimensionar() {
+            var height = window.innerHeight - 170;
+            $("#contentHolder").css("min-height", height + "px");
+
+        }
+
+        window.onload = function () {
+            redimensionar();
+
+            $(window).on("resize", redimensionar);
+        }
+
+
+    </script>
+</body>
+</html>
